@@ -1,6 +1,7 @@
 // Import the 'express' module
 import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import Router from './routes';
@@ -13,7 +14,6 @@ const app = express();
 const port = 8080;
 
 //call enviroment
-dotenv.config();
 
 connectDB();
 

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Import the 'express' module
 const express_1 = __importDefault(require("express"));
 const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 const cors_1 = __importDefault(require("cors"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const routes_1 = __importDefault(require("./routes"));
@@ -15,7 +16,6 @@ const app = (0, express_1.default)();
 // Set the port number for the server
 const port = 8080;
 //call enviroment
-dotenv_1.default.config();
 (0, database_1.connectDB)();
 app.use((0, cors_1.default)({
     origin: 'http://localhost:3000',
