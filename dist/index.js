@@ -18,7 +18,7 @@ const port = 8080;
 //call enviroment
 (0, database_1.connectDB)();
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://hrm-client-nine.vercel.app'],
     credentials: true,
 }));
 app.use(express_1.default.json());
